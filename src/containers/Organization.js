@@ -11,12 +11,9 @@ import { Form, FormGroup, FormFeedback, Label, InputGroup } from 'reactstrap';
 const ORG_TYPES = [
   {
     id: 'Organization',
-    name: 'Organisaatio'
+    name: 'FAQ Generator'
   },
-  {
-    id: 'EducationalOrganization',
-    name: 'Opetusorganisaatio'
-  }
+
 ];
 
 let Organization = ({ updateOrganization, validateOrganization, organization, validation }) => {
@@ -30,16 +27,16 @@ let Organization = ({ updateOrganization, validateOrganization, organization, va
       <h2>Organisaatio</h2>
       <Form>
         <FormGroup>
-          <Label for='orgType'>Organisaation tyyppi</Label>
+          <Label for='orgType'>FAQ SEO Generator </Label>
           <Select id='orgType' options={ORG_TYPES} onChange={(type) => updateOrganization({ '@type': type })} />
         </FormGroup>
         <FormGroup>
-          <Label for='orgName'>Nimi</Label>
-          <TextInput id='orgName' value={organization.name} placeholder='Nimi' onChange={(name) => updateOrganization({ name })} />
+          <Label for='orgName'>Soru 1</Label>
+          <TextInput id='orgName' value={organization.name} placeholder='Soru 1' onChange={(name) => updateOrganization({ name })} />
         </FormGroup>
         <FormGroup>
-          <Label for='orgAltName'>Vaihtoehtoinen nimi</Label>
-          <TextInput id='orgAltName' value={organization.alternateName} placeholder='Vaihtoehtoinen nimi' onChange={(alternateName) => updateOrganization({ alternateName })} />
+          <Label for='orgAltName'>Soru 2</Label>
+          <TextInput id='orgAltName' value={organization.alternateName} placeholder='' onChange={(alternateName) => updateOrganization({ alternateName })} />
         </FormGroup>
         <FormGroup>
           <Label for='orgUrl'>Verkko-osoite</Label>

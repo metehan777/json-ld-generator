@@ -13,11 +13,11 @@ import Select from '../components/Select';
 const TYPES = [
   {
     id: 'organization',
-    name: 'Organisaatio'
+    name: 'FAQ SEO Generator'
   },
   {
     id: 'article',
-    name: 'Artikkeli'
+    name: 'Article'
   }
 ];
 
@@ -39,7 +39,7 @@ let AnnotationSelector = ({ updateAnnotationType, current, currentType }) => {
         <Col>
           <Form>
             <FormGroup>
-              <Label for='annotationType'>Valitse tyyppi</Label>
+              <Label for='annotationType'>Schema Türünü Seçiniz</Label>
               <Select id='annotationType' options={TYPES} onChange={(annotationType) => updateAnnotationType(annotationType)} />
             </FormGroup>
           </Form>
